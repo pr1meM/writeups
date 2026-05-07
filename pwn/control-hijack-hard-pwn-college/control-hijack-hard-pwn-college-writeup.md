@@ -1,11 +1,11 @@
 
 # Control Hijack (hard) - pwn.college Writeup by ml0w6c65766c
----
+
 ## Task
 
 Overflow a buffer and smash the stack to obtain the flag!
 
----
+
 ## Approach
 
 Unfortunately I can’t show the exact exploit details due to pwn.college rules, but I still want to share my general approach and thoughts.
@@ -16,7 +16,7 @@ After that, I opened the binary in GDB to analyze what was happening internally.
 
 I also searched for useful functions such as a `win` function using GDB to understand where I should redirect execution.
 
----
+
 ## Vulnerability
 
 The issue was a classic stack-based buffer overflow:
@@ -27,7 +27,7 @@ The issue was a classic stack-based buffer overflow:
 
 This makes it possible to control the execution flow by overwriting the return address.
 
---- 
+
 ## Exploitation Idea
 
 The general idea was:
@@ -64,7 +64,7 @@ int main() {
 
 ```
 
----
+
 ## Result
 
 After applying the concept and running the exploit, the program execution was successfully redirected and the flag was obtained.
