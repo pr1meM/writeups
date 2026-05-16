@@ -80,7 +80,7 @@ In the `vuln` function there is a classic buffer overflow: `gets(local_bc)`. Sin
 
 ## Exploitation
 
-First we need the offset from the input buffer to the return address. With `cyclic 230` we can generate a 230-byte non-repeating string. When we paste it into the input field in pwndbg, we can see where the program crashes — EIP will contain part of the pattern. We copy that value and run `cyclic -l <value>` to get the exact offset.
+First we need the offset from the input buffer to the return address. With `cyclic 230` we can generate a 230-byte non-repeating string. When we paste it into the input field in pwndbg, we can see where the program crashes, the EIP will contain part of the pattern. We copy that value and run `cyclic -l <value>` to get the exact offset.
 
 ![offset](offset.png)
 
