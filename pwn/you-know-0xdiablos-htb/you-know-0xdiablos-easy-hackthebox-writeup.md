@@ -92,7 +92,6 @@ from pwn import *
 context.binary = './vuln'
 
 elf = ELF("./vuln")
-rop = ROP(elf)
 
 # IP and port here
 HOST = ''
