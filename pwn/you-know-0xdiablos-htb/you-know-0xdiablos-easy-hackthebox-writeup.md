@@ -1,7 +1,4 @@
-# You know 0xDiablos (Easy) — HackTheBox Writeup
 
-
-**Task:** I missed my flag
 
 ## Initial Recon
 
